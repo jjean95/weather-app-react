@@ -31,12 +31,21 @@ export default function App() {
   let form = (
     <div className="App">
       <form onSubmit={handleSubmit}>
-        <input
-          type="search"
-          placeholder="Search for city"
-          onChange={updateCity}
-        />
-        <button type="submit">Search</button>
+        <div className="row">
+          <div className="col-9">
+            <input
+              type="search"
+              placeholder="Search for city"
+              onChange={updateCity}
+              className="form-control"
+            />
+          </div>
+          <div className="col-3">
+            <button type="submit" className="btn btn-primary">
+              Search
+            </button>
+          </div>
+        </div>
       </form>
     </div>
   );
@@ -44,16 +53,21 @@ export default function App() {
     return (
       <div className="App">
         {form}
+        <br></br>
         <h3>{city}</h3>
-        <ul>
-          <li>Temperature: {Math.round(weather.temperature)}°C</li>
-          <li>Humidity: {weather.humidity}%</li>
-          <li>Wind: {weather.wind}km/h</li>
-          <li>
+        <div className="row">
+          <div className="col-6">
             <img src={weather.icon} alt={weather.description} />
-          </li>
-          <li>Description: {weather.description}</li>
-        </ul>
+            <p>Description: {weather.description}</p>
+          </div>
+          <div className="col-6">
+            <ul>
+              <li>Temperature: {Math.round(weather.temperature)}°C</li>
+              <li>Humidity: {weather.humidity}%</li>
+              <li>Wind: {weather.wind}km/h</li>
+            </ul>
+          </div>
+        </div>
       </div>
     );
   } else {

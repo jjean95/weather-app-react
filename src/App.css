@@ -1,5 +1,12 @@
+h1 {
+  text-align: center;
+}
+
 .App {
   text-align: center;
+  border: 1px solid #282c34;
+  padding: 10px 20px;
+  margin: auto 20px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -21,6 +28,10 @@
 
 .App-link {
   color: #61dafb;
+}
+
+ul {
+  list-style-type: none;
 }
 
 @keyframes App-logo-spin {
