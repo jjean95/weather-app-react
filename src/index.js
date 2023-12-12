@@ -10,6 +10,10 @@ root.render(
   <React.StrictMode>
     <h1>Weather Search</h1>
     <App />
+    <p>
+      <a href="https://github.com/jjean95/weather-app-react">Open-source</a> by
+      Jia Ean
+    </p>
   </React.StrictMode>
 );
 
