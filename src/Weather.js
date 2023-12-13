@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import FormattedDate from "./FormattedDate";
+import "./App.css";
 
 export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
@@ -39,7 +40,7 @@ export default function Weather(props) {
       <div className="App">
         <div className="Weathers">
           <form onSubmit={handleSubmit}>
-            <div className="row">
+            <div className="row mt-2">
               <div className="col-9">
                 <input
                   type="search"
@@ -59,13 +60,25 @@ export default function Weather(props) {
           <div className="row">
             <div className="col-6">
               <h3>{weatherData.city}</h3>
-              <ul>
+              <ul className="date">
                 <li>
                   <FormattedDate date={weatherData.date} />
                 </li>
-                <li className="text-capitalize">{weatherData.description}</li>
+                <div className="row mt-3">
+                  <div className="col-sm-5">
+                    <img
+                      src={weatherData.icon}
+                      alt={weatherData.description}
+                      className="theimg"
+                    />
+                  </div>
+                  <div className="col-sm-7 mt-3">
+                    <li className="text-capitalize">
+                      {weatherData.description}
+                    </li>
+                  </div>
+                </div>
               </ul>
-              <img src={weatherData.icon} alt={weatherData.description} />
             </div>
             <div className="col-6">
               <ul>
