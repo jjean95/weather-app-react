@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import FormattedDate from "./FormattedDate";
+import Weatherinfo from "./Weatherinfo";
 import "./App.css";
 
 export default function Weather(props) {
@@ -14,7 +14,7 @@ export default function Weather(props) {
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
-      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
       description: response.data.weather[0].description,
       city: response.data.name,
     });
@@ -30,7 +30,8 @@ export default function Weather(props) {
   }
 
   function search() {
-    const apikey = "57b2c40fdae71a6ba41d72685e3226e2";
+    const apikey = "1a2b7258ebd456c01aef9175dfe8b709";
+    let city = "Kuala Lumpur";
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=metric`;
     axios.get(url).then(handleWeather);
   }
@@ -56,45 +57,12 @@ export default function Weather(props) {
               </div>
             </div>
           </form>
-          <br></br>
-          <div className="row">
-            <div className="col-5">
-              <h3>{weatherData.city}</h3>
-              <ul className="date">
-                <li>
-                  <FormattedDate date={weatherData.date} />
-                </li>
-                <li className="text-capitalize">{weatherData.description}</li>
-                <div className="row">
-                  <div className="col-6">
-                    <img
-                      src={weatherData.icon}
-                      alt={weatherData.description}
-                      className="theimg"
-                    />
-                  </div>
-                  <div className="col-3">
-                    <li>{Math.round(weatherData.temperature)}°C</li>
-                  </div>
-                </div>
-              </ul>
-            </div>
-            <div className="col-3">
-              <ul>
-                <li>Humidity: {weatherData.humidity}%</li>
-                <li>Wind: {weatherData.wind}km/h</li>
-              </ul>
-            </div>
-          </div>
+          <Weatherinfo data={weatherData} />
         </div>
       </div>
     );
   } else {
-    const apikey = "57b2c40fdae71a6ba41d72685e3226e2";
-    let city = "Kuala Lumpur";
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=metric`;
-    axios.get(url).then(handleWeather);
-
-    return "Loading";
+    search();
+    return "Loading...";
   }
 }
