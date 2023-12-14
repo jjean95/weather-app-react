@@ -4,6 +4,7 @@ h1 {
 
 .Weathers {
   border: 1px solid #282c34;
+  border-radius: 10px;
   padding: 10px 40px;
   margin: 30px 70px;
 }

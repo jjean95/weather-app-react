@@ -64,25 +64,23 @@ export default function Weather(props) {
                 <li>
                   <FormattedDate date={weatherData.date} />
                 </li>
-                <div className="row mt-3">
-                  <div className="col-sm-3">
+                <li className="text-capitalize">{weatherData.description}</li>
+                <div className="row">
+                  <div className="col-6">
                     <img
                       src={weatherData.icon}
                       alt={weatherData.description}
                       className="theimg"
                     />
                   </div>
-                  <div className="col-sm-3 mt-3">
-                    <li className="text-capitalize">
-                      {weatherData.description}
-                    </li>
+                  <div className="col-3">
+                    <li>{Math.round(weatherData.temperature)}°C</li>
                   </div>
                 </div>
               </ul>
             </div>
             <div className="col-3">
               <ul>
-                <li>Temperature: {Math.round(weatherData.temperature)}°C</li>
                 <li>Humidity: {weatherData.humidity}%</li>
                 <li>Wind: {weatherData.wind}km/h</li>
               </ul>
