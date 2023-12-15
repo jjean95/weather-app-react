@@ -4,9 +4,8 @@ import Weatherinfo from "./Weatherinfo";
 import "./App.css";
 
 export default function Weather(props) {
-  const [city, setCity] = useState(props.defaultCity);
   const [weatherData, setweatherData] = useState({ ready: false });
-
+  const [city, setCity] = useState(props.defaultCity);
   function handleWeather(response) {
     setweatherData({
       ready: true,
@@ -57,7 +56,7 @@ export default function Weather(props) {
               </div>
             </div>
           </form>
-          <Weatherinfo data={weatherData} />
+          <Weatherinfo data={weatherData} city={city} />
         </div>
       </div>
     );
