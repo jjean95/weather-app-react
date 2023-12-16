@@ -19,6 +19,7 @@ export default function Weatherinfo(props) {
                   <Weathericon
                     code={props.data.icon}
                     alt={props.data.description}
+                    size={52}
                   />
                 </div>
               </div>
