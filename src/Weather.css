@@ -1,0 +1,23 @@
+.Weathers {
+  border: 1px solid #282c34;
+  border-radius: 10px;
+  padding: 10px 40px;
+}
+
+.WeatherTemperature .temperature {
+  font-size: 60px;
+  font-weight: 500;
+}
+
+.Weather canvas {
+  margin: 10px;
+}
+
+.WeatherTemperature .unit {
+  top: -33px;
+  position: relative;
+}
+
+.Weather p {
+  text-align: left;
+}

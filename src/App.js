@@ -13,7 +13,8 @@ export default function App() {
             <a href="https://github.com/jjean95/weather-app-react">
               Open-source
             </a>{" "}
-            by Jia Ean
+            by Jia Ean, created using HTML, CSS, React (JavaScript) hosted using
+            Netlify
           </p>
         </footer>
       </div>
