@@ -40,7 +40,7 @@ export default function Weather(props) {
 
   if (weatherData.ready) {
     return (
-      <div className="Weathers shadow-lg p-3 mb-5 bg-white rounded">
+      <div className="Weathers p-3 mb-3 bg-white border border-5 border-dark rounded">
         <form onSubmit={handleSubmit}>
           <div className="row mt-2">
             <div className="col-6">
@@ -48,7 +48,7 @@ export default function Weather(props) {
                 type="search"
                 placeholder="Search for city"
                 onChange={updateCity}
-                className="form-control"
+                className="form-control border border-4 border-dark"
               />
             </div>
             <div className="col-2">
@@ -56,8 +56,12 @@ export default function Weather(props) {
                 Search
               </button>
             </div>
-            <div class="col">
-              <button type="submit" class="btn btn-success mb-3" id="current">
+            <div className="col">
+              <button
+                type="submit"
+                className="btn btn-success mb-3"
+                id="current"
+              >
                 Current Location
               </button>
             </div>
