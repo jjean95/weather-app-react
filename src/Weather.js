@@ -52,17 +52,11 @@ export default function Weather(props) {
               />
             </div>
             <div className="col-2">
-              <button type="submit" className="btn btn-primary">
-                Search
-              </button>
-            </div>
-            <div className="col">
               <button
                 type="submit"
-                className="btn btn-success mb-3"
-                id="current"
+                className="btn border border-4 border-dark btn-primary"
               >
-                Current Location
+                Search
               </button>
             </div>
           </div>

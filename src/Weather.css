@@ -15,3 +15,18 @@
 .Weather p {
   text-align: left;
 }
+
+strong {
+  font-size: 18px;
+}
+.ForeTemp {
+  font-weight: bold;
+}
+
+.ForeTemp-Min {
+  opacity: 0.5;
+}
+
+h3 {
+  font-weight: bold;
+}

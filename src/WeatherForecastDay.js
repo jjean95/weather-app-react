@@ -1,5 +1,6 @@
 import React from "react";
 import Weathericon from "./Weathericon";
+import "./Weather.css";
 
 export default function WeatherForecastDay(props) {
   function maxTemperature() {
