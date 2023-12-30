@@ -40,9 +40,9 @@ export default function Weather(props) {
 
   if (weatherData.ready) {
     return (
-      <div className="Weathers p-3 mb-3 bg-white border border-5 border-dark rounded">
+      <div className="Weathers m-4 p-3 mb-3 bg-white border border-5 border-dark rounded">
         <form onSubmit={handleSubmit}>
-          <div className="row mt-2">
+          <div className="row mt-1">
             <div className="col-6">
               <input
                 type="search"

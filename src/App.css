@@ -8,11 +8,15 @@ body {
     rgb(234, 251, 251) 77.6%,
     rgb(240, 251, 244) 100.7%
   );
+  overflow: hidden;
 }
+
 .Weather h1 {
   text-align: center;
   margin-bottom: 20px;
+  margin-top: 10px;
   font-size: 50px;
+  font-weight: bolder;
 }
 
 @media (prefers-reduced-motion: no-preference) {

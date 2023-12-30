@@ -24,9 +24,10 @@ strong {
 }
 
 .ForeTemp-Min {
-  opacity: 0.5;
+  color: #96c0fe;
 }
 
-h3 {
+.cityname {
   font-weight: bold;
+  color: #0b5ed7;
 }
